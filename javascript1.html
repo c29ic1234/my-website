@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+
+		#izzy{
+			width: 500px;
+			height: 500px;
+			background-image: url(izzy.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<div id="izzy"></div>
+
+<script type="text/javascript">
+
+izzy.addEventListener("click", function(){
+	izzy.style.backgroundColor="lightpink"
+	izzy.style.backgroundImage="url(izzy.jpg)"
+	console.log(event)
+} )
+
+</body>
+</html>

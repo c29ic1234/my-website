@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	
+	<style type="text/css">
+
+		body{
+			background-color: white;
+			font-family: fantasy;
+			font-size: 20px;
+			color: lightskyblue;
+			border-radius: 25%;
+		}
+
+		a{
+			color: mediumblue;
+			text-decoration: none;
+		}
+
+		.option{
+			font-family: fantasy;
+			display: inline-block;
+			width: 45%;
+			text-align: center;
+			height: 100px;
+			background-position: center;
+			background-repeat: contain;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		.text{
+			font-family: fantasy;
+			display: inline-block;
+			width: 32%;
+			text-align: center;
+			height: 150px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			position:relative;
+			color: white;
+			top:0px;
+		}
+
+		#menu{
+			width:100%;
+			background-color:skyblue;
+			height:160px;
+			
+		}
+
+		#honeypot{
+			background-image: url(honeypot.png);
+		}
+
+
+		}
+
+		.gif{
+			display: inline-block;
+			width: 100%;
+			text-align: center;
+			height: 500px;
+			background-position: center;
+			background-repeat: contain;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+
+		#background{
+			width:100%;
+			height:620px;
+			background-image: url(background.png);
+			background-size:cover;
+			background-position: center;
+		}
+
+		#title{
+			position:relative;
+			top:0px;
+			height: 150px;
+			font-size:40px;
+		}
+
+		#titletext{
+			position: relative;
+			top:50px;
+		}
+
+		#balloon{
+			width: 220px;
+			height: 220px;
+			background-image: url(balloon.png);
+			background-position: center;
+			background-size: contain;
+			position: relative;
+			bottom: 600px;
+		}
+
+		.balloon: {
+			animation: moveUp 2s forwards;
+		}
+
+		@keyframes moveUp {
+  			
+  			from {
+   				transform: translateY(0);
+
+   				}
+
+   			to {
+   				transform: translateY(-100px);
+
+   			}
+
+   		}
+
+
+
+	</style>
+	
+</head>
+<body>
+
+	<center> 
+
+	<div id="menu">
+	
+	<a href="projects.html">
+		<div id="honeypot" class="text">Projects Page</div>
+
+		</a>
+	<div id="title" class="text">
+		<div id="titletext">Izzy's website!!!</div>
+	</div>
+
+
+	<a href="journal.html">
+		<div id="honeypot" class="text">Journal Page</div>
+	</a>
+
+	</div>
+
+	<div id="background"></div>
+
+	<div id="balloon" class="balloon"></div>
+
+	</center>
+
+
+
+</body>
+
+</html>
