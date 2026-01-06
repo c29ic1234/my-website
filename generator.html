@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+
+		.text{
+			font-size: 100px;
+			color: black;
+		}
+
+		#track{
+			background-image: url(track.png);
+			position: center;
+			top: 300px;
+		}
+
+	</style>
+
+</head>
+<body>
+
+
+	<script type="text/javascript">
+
+		let event = ["55m dash", "55m hurdles", "200m dash", "300m dash", "500m run", "600m run", "1000m run", "1 mile", "2 mile", "4x200m relay", "4x400m relay", "4x800m relay", "1600 SMR relay", "long jump", "high jump", "triple jump", "shot put", "pole vault", "weight throw", "nothing"]
+
+		document.addEventListener("click",
+			function(){
+				let x = Math.round(Math.random()*18)
+				console.log(x)
+				alert(names[x])
+			})
+
+	</script>
+
+
+	<div id="text"></div>
+
+	<div id="track" class="track"></div>
+</body>
+</html>
