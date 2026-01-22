@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style>
+		.littles{
+			width: 10px;
+			height:10px;
+			border: 1px solid pink;
+			display: inline-block;
+			position: absolute;
+			transition:.1s;
+		}
+	</style>
+</head>
+<body>
+
+
+<script type=text/javascript>
+	
+	function makeConfetti (){
+			// make a div
+			let confetti = document.createElement("div")
+			// add the class of littles, which allows us to style it easily
+			confetti.classList.add("littles")
+
+			// put it in the body
+			document.body.appendChild(confetti)
+
+			// these variables store three different random numbers between 0 and 255
+			let r= Math.round(Math.random()*255)
+			let g= Math.round(Math.random()*255)
+			let b= Math.round(Math.random()*255) 
+
+
+			// this adds those numbers and adds them to the divs color
+			confetti.style.backgroundColor ="rgb("+ r + "," + g + "," + b +")"
+			confetti.style.left = Math.random()*1500+"px"
+			confetti.style.top = Math.random()*1000+"px"
+
+			console.log(confetti.style.top)
+
+			function move(){
+				// change the top of each div by a certain number of px//
+				confetti.style.top = parseInt(confetti.style.top)+10+"px"
+				console.log(confetti.style.top)
+			}
+
+				setInterval(move, 100)
+
+
+		} //end of makeConfetti function
+
+
+		// we run the makeConfetti function we made in this setInterval. setInterval runs a function whose name you give it every set interval (meaning every certain number of milliseconds) it will run forever at whatever interval we set it at
+	setInterval(makeConfetti, 100)
+</script>
+</body>
+</html>

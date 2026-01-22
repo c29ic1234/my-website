@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+
+		#runner{
+			background-image: url(runner.jpg);
+			width: 200px;
+			height: 200px;
+			background0size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 500px;
+			top: 500px;
+		}
+
+		.text{
+			width
+		}
+		
+	</style>
+</head>
+<body>
+
+	<div id="runner" id="runner"></div>
+
+	<div id="text" class="text"></div>
+
+	<script type="text/javascript">
+
+		function move (){
+		runner.style.top = Math.random()*1000+"px"
+		runner.style.left = Math.random()*1000+"px"
+		}
+
+		setInterval(move,1000)
+
+</body>
+</html>

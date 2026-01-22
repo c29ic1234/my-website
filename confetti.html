@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style>
+		.littles{
+			width: 10px;
+			height:30px;
+			border: 1px solid pink;
+			display: inline-block;
+			position: absolute;
+			animation-name: swing;
+			animation-duration: 2s;
+			animation-timing-function: ease-in-out;
+		}
+
+		@keyframes swing {
+			from {
+				transform: rotate(-360deg);
+			}
+
+			to {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+
+
+<script type=text/javascript>
+	
+	function makeConfetti (){
+			let confetti = document.createElement("div")
+			confetti.classList.add("littles")
+
+			document.body.appendChild(confetti)
+
+			let r= Math.round(Math.random()*255)
+			let g= Math.round(Math.random()*255)
+			let b= Math.round(Math.random()*255) 
+			let rotation = Math.random() * 360
+
+			confetti.style.backgroundColor ="rgb("+ r + "," + g + "," + b +")"
+			confetti.style.left = Math.random()*1500+"px"
+			confetti.style.top = Math.random()*1000+"px"
+			confetti.style.transform = `rotate(${rotation}deg)`
+			console.log(confetti.style.top)
+
+			function move(){
+				confetti.style.top = parseInt(confetti.style.top)+20+"px"
+				console.log(confetti.style.top)
+			}
+
+				setInterval(move, 100)
+
+
+		}
+
+	setInterval(makeConfetti, 10)
+</script>
+</body>
+</html>
