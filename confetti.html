@@ -6,7 +6,7 @@
 	<title></title>
 
 	<style>
-		.littles{
+		.rectangles{
 			width: 10px;
 			height:30px;
 			border: 1px solid pink;
@@ -26,6 +26,15 @@
 				transform: rotate(360deg);
 			}
 		}
+
+		@keyframes swing3d {
+			from {
+				transform: rotateX(45deg) rotateY(-180deg);
+			}
+			to {
+				transform: rotateX(-45deg) rotateY(180deg);
+			}
+		}
 	</style>
 </head>
 <body>
@@ -35,7 +44,7 @@
 	
 	function makeConfetti (){
 			let confetti = document.createElement("div")
-			confetti.classList.add("littles")
+			confetti.classList.add("rectangles")
 
 			document.body.appendChild(confetti)
 
@@ -44,18 +53,28 @@
 			let b= Math.round(Math.random()*255) 
 			let rotation = Math.random() * 360
 
+			let startRot = Math.random() * -60 + "deg"
+			let endRot = Math.random() * 60 + "deg"
+
 			confetti.style.backgroundColor ="rgb("+ r + "," + g + "," + b +")"
 			confetti.style.left = Math.random()*1500+"px"
 			confetti.style.top = Math.random()*1000+"px"
 			confetti.style.transform = `rotate(${rotation}deg)`
 			console.log(confetti.style.top)
 
-			function move(){
+			confetti.style.top = Math.random() * 1000 + "px"
+			confetti.style.left = Math.random() * 1500 + "px"
+			confetti.style.transform = "rotate("+rotation+"deg)"
+
+			confetti.style.setProperty("--startRot", startRot)
+			confetti.style.setProperty("--endRot", endRot)
+
+			function fall(){
 				confetti.style.top = parseInt(confetti.style.top)+20+"px"
 				console.log(confetti.style.top)
 			}
 
-				setInterval(move, 100)
+				setInterval(fall, 100)
 
 
 		}
