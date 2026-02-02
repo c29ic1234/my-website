@@ -39,9 +39,13 @@
 </head>
 <body>
 
+	<button id="btn">drop confetti</button>
+	<input type="color" value="#ff0000" id="colorPicker">
 
-<script type=text/javascript>
-	
+	<script type=text/javascript>
+	let colors = ["#03045e", "#023e8a", "#0077b6", "#0096c7", "#00b4d8", "#48cae4", "#90e0ef", "#ade8f4", "#caf0f8"]
+
+	let dropConfettiBtn = document.getElementById("btn")
 	function makeConfetti (){
 			let confetti = document.createElement("div")
 			confetti.classList.add("rectangles")
@@ -55,8 +59,11 @@
 
 			let startRot = Math.random() * -60 + "deg"
 			let endRot = Math.random() * 60 + "deg"
+			let randomColorIndex = Math.floor(Math.random() * colors.length)
+			console.log(randomColorIndex)
 
-			confetti.style.backgroundColor ="rgb("+ r + "," + g + "," + b +")"
+			confetti.style.backgroundColor = colorPicker.value
+
 			confetti.style.left = Math.random()*1500+"px"
 			confetti.style.top = Math.random()*1000+"px"
 			confetti.style.transform = `rotate(${rotation}deg)`
@@ -76,10 +83,17 @@
 
 				setInterval(fall, 100)
 
-
 		}
 
-	setInterval(makeConfetti, 10)
+		dropConfettiBtn.addEventListener("click", function() {
+			for ( let i = 0; i < 10; i++) {
+				makeConfetti()
+
+			}
+
+		})
+		let colorPicker = document.getElementById("colorPicker")
+		console.log(colorPicker.value)
 </script>
 </body>
 </html>
