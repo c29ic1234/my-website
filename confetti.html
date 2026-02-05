@@ -12,18 +12,21 @@
 			border: 1px solid pink;
 			display: inline-block;
 			position: absolute;
-			animation-name: swing;
-			animation-duration: 2s;
+			animation-name: swing3d;
+			animation-duration: 0.8s;
+			animation-direction: alternate;
+			animation-iteration-count: infinite;
 			animation-timing-function: ease-in-out;
 		}
 
+
 		@keyframes swing {
 			from {
-				transform: rotate(-360deg);
+				transform: rotate(var(--startRot));
 			}
 
 			to {
-				transform: rotate(360deg);
+				transform: rotate(var(--endRot));
 			}
 		}
 
@@ -57,8 +60,8 @@
 			let b= Math.round(Math.random()*255) 
 			let rotation = Math.random() * 360
 
-			let startRot = Math.random() * -60 + "deg"
-			let endRot = Math.random() * 60 + "deg"
+			let startRot = Math.random() * -100 + "deg"
+			let endRot = Math.random() * 100 + "deg"
 			let randomColorIndex = Math.floor(Math.random() * colors.length)
 			console.log(randomColorIndex)
 
