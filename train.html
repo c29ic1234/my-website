@@ -55,23 +55,42 @@
 
 	<script>
 		let people = ["izzy", "alexandra", "jiyaa", "victoria"]
-			people.push("sophie")
-			people.push("kate")
-			let lastPerson = people.pop()
-			console.log(lastPerson)
-			console.log(people)
 
+		for(let i = 0,; i < people.length; i ++){
+			console.log(people[i])
 
-			let addPersonBtn = document.getElementById("add-person")
-			let removeLastPersonbtn = document.getElementById("remove-last-person")
+		let cart = document.createElement("div")
+		cart.classList.add("cart")
+		document.body.appendChild(cart)
+		cart.textContent = people[i]
+		train.appendChild(cart)
 
-			addPersonBtn.addEventListener("click", function (){
-				let personInput = document.getElementById("person")
-				people.push(personInput.value)
-				personInput.value = ""
+		}
+
+		function makeTrain(){
+			train.innerHTML = ""
+			for(let i = 0,; i < people.length; i ++){
+			console.log(people[i])
+				let cart = document.createElement("div")
+				cart.classList.add("cart")
+				document.body.appendChild(cart)
+				cart.textContent = people[i]
+				train.appendChild(cart)	
+			}
+		}
+
+		makeTrain()
+			
+		let addPersonBtn = document.getElementById("add-person")
+		
+		let removeLastPersonbtn = document.getElementById("remove-last-person")
+		removePersonBtn.addEventListener("click", function (){
+				people.pop()
+				makeTrain()
 				console.log(people)
 			})
 
+			let removeLastPersonBtn = document.getElementById("remove-last-person")
 			removeLastPersonBtn.addEventListener("click", function() {
 				people.pop()
 			})
