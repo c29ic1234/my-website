@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="TF-8">
+	<meta name="viewport" content="
+	width=device-width, initial-scale=1">
+	<title>Document</title>
+		<script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+
+</head>
+<body>
+	<script>
+		function setup() {
+			createCanvas(800, 800)
+			noStroke()
+			rectMode(CENTER)
+		}
+
+		function draw () {
+			background(220)
+			fill("yellow")
+			circle(300, 180, 100) // left ear
+			circle(500, 180, 100) // right ear
+			ellipse(400, 540, 300, 350) //body
+			ellipse(330, 720, 80, 130) //left leg
+			ellipse(470, 720, 80, 130) //right leg
+			ellipse(250, 480, 120, 100) //left arm
+			ellipse(550, 480, 120, 100) //right arm
+			fill("red")
+			ellipse(400, 480, 280, 200) //shirt
+			fill("yellow")
+			circle(400, 300, 250) // face
+			fill("black")
+			ellipse(440, 270, 20, 20)
+			ellipse(360, 270, 20, 20)
+			// console.log(mouseX, mouseY)
+		}
+</script>
+</body>
+
+</body>
+</html>
