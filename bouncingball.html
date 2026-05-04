@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+</head>
+<body>
+<script>
+let xpos
+let ypos
+let xspeed
+let yspeed
+let fillColor = "blue"
+function setup(){
+createCanvas(800,800)
+
+noStroke()
+xpos=width/2
+xspeed = 5
+ypos=height/2
+yspeed = 8
+d=50
+// let randomNumber = random(0, width)
+// console.log(randomNumber)
+
+}
+
+function draw(){
+background(231, 214, 237)
+if (xpos + d/2 > width || xpos - d/2 < 0){
+xspeed = xspeed * -1
+}
+if (ypos + d/2 > height || ypos - d/2 < 0){
+yspeed *= -1
+}
+changeBallColor()
+xpos+=xspeed
+ypos+= yspeed
+fill(fillColor)
+circle(xpos, ypos, d)
+
+}
+function changeBallColor(){
+if(xpos>width/2 && ypos<height/2){
+fillColor = "rgb(242, 191, 215)"
+}
+else if(xpos>width/2 && ypos>height/2){
+fillColor = "rgb(179, 235, 242)"
+}
+else if(xpos<width/2 && ypos<height/2){
+fillColor = "rgb(247, 240, 168)"
+}
+else if(xpos,width/2 && ypos>height/2){
+fillColor = "rgb(149, 125, 173)"
+}
+}
+</script>
+</body>
+</html>
