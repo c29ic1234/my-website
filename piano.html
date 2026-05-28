@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#piano{
+    height: 500px;
+    width: 1255px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/28/Piano_88_keyboard_template.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original);
+    background-repeat: no-repeat;
+    position: relative;
+}
+.key{
+    height: 150px;
+    width: 23px;
+    background-color: rgba(255, 0, 0, 0); /* Change transparency to see hitboxes if needed */
+    position: absolute;
+    cursor: pointer;
+}
+#key1 { left: 10px;  top: 10px; }
+#key2 { left: 33px;  top: 10px; }
+#key3 { left: 57px;  top: 10px; }
+#key4 { left: 82px;  top: 10px; }
+#key5 { left: 106px; top: 10px; }
+#key6 { left: 130px; top: 10px; }
+#key7 { left: 153px; top: 10px; }
+#key8 { left: 177px; top: 10px; }
+#key9 { left: 201px; top: 10px; }
+#key10 { left: 226px; top: 10px; }
+#key11 { left: 250px; top: 10px; }
+#key12 { left: 273px; top: 10px; }
+#key13 { left: 297px; top: 10px; }
+#key14 { left: 321px; top: 10px; }
+#key15 { left: 345px; top: 10px; }
+#key16 { left: 370px; top: 10px; }
+#key17 { left: 394px; top: 10px; }
+#key18 { left: 418px; top: 10px; }
+#key19 { left: 442px; top: 10px; }
+#key20 { left: 466px; top: 10px; }
+#key21 { left: 490px; top: 10px; }
+#key22 { left: 514px; top: 10px; }
+#key23 { left: 538px; top: 10px; }
+#key24 { left: 562px; top: 10px; }
+#key25 { left: 586px; top: 10px; }
+#key26 { left: 610px; top: 10px; }
+#key27 { left: 634px; top: 10px; }
+#key28 { left: 658px; top: 10px; }
+#key29 { left: 682px; top: 10px; }
+#key30 { left: 706px; top: 10px; }
+#key31 { left: 730px; top: 10px; }
+#key32 { left: 754px; top: 10px; }
+#key33 { left: 778px; top: 10px; }
+#key34 { left: 802px; top: 10px; }
+#key35 { left: 826px; top: 10px; }
+#key36 { left: 850px; top: 10px; }
+#key37 { left: 874px; top: 10px; }
+#key38 { left: 898px; top: 10px; }
+#key39 { left: 922px; top: 10px; }
+#key40 { left: 946px; top: 10px; }
+#key41 { left: 970px; top: 10px; }
+#key42 { left: 994px; top: 10px; }
+#key43 { left: 1018px; top: 10px; }
+#key44 { left: 1042px; top: 10px; }
+#key45 { left: 1066px; top: 10px; }
+#key46 { left: 1090px; top: 10px; }
+#key47 { left: 1114px; top: 10px; }
+#key48 { left: 1138px; top: 10px; }
+#key49 { left: 1162px; top: 10px; }
+#key50 { left: 1186px; top: 10px; }
+#key51 { left: 1210px; top: 10px; }
+#key52 { left: 1234px; top: 10px; }
+
+.audio {
+    display: none;
+}
+</style>
+</head>
+<body>
+
+<div id="piano">
+    <div class="key" id="key1"></div>
+    <div class="key" id="key2"></div>
+    <div class="key" id="key3"></div>
+    <div class="key" id="key4"></div>
+    <div class="key" id="key5"></div>
+    <div class="key" id="key6"></div>
+    <div class="key" id="key7"></div>
+    <div class="key" id="key8"></div>
+    <div class="key" id="key9"></div>
+    <div class="key" id="key10"></div>
+    <div class="key" id="key11"></div>
+    <div class="key" id="key12"></div>
+    <div class="key" id="key13"></div>
+    <div class="key" id="key14"></div>
+    <div class="key" id="key15"></div>
+    <div class="key" id="key16"></div>
+    <div class="key" id="key17"></div>
+    <div class="key" id="key18"></div>
+    <div class="key" id="key19"></div>
+    <div class="key" id="key20"></div>
+    <div class="key" id="key21"></div>
+    <div class="key" id="key22"></div>
+    <div class="key" id="key23"></div>
+    <div class="key" id="key24"></div>
+    <div class="key" id="key25"></div>
+    <div class="key" id="key26"></div>
+    <div class="key" id="key27"></div>
+    <div class="key" id="key28"></div>
+    <div class="key" id="key29"></div>
+    <div class="key" id="key30"></div>
+    <div class="key" id="key31"></div>
+    <div class="key" id="key32"></div>
+    <div class="key" id="key33"></div>
+    <div class="key" id="key34"></div>
+    <div class="key" id="key35"></div>
+    <div class="key" id="key36"></div>
+    <div class="key" id="key37"></div>
+    <div class="key" id="key38"></div>
+    <div class="key" id="key39"></div>
+    <div class="key" id="key40"></div>
+    <div class="key" id="key41"></div>
+    <div class="key" id="key42"></div>
+    <div class="key" id="key43"></div>
+    <div class="key" id="key44"></div>
+    <div class="key" id="key45"></div>
+    <div class="key" id="key46"></div>
+    <div class="key" id="key47"></div>
+    <div class="key" id="key48"></div>
+    <div class="key" id="key49"></div>
+    <div class="key" id="key50"></div>
+    <div class="key" id="key51"></div>
+    <div class="key" id="key52"></div>
+</div>
+
+<audio id="key1_audio" class="audio"><source src="key1.m4a" type="audio/mp4"></audio>
+<audio id="key2_audio" class="audio"><source src="key2.m4a" type="audio/mp4"></audio>
+<audio id="key3_audio" class="audio"><source src="key3.m4a" type="audio/mp4"></audio>
+<audio id="key4_audio" class="audio"><source src="key4.m4a" type="audio/mp4"></audio>
+<audio id="key5_audio" class="audio"><source src="key5.m4a" type="audio/mp4"></audio>
+<audio id="key6_audio" class="audio"><source src="key6.m4a" type="audio/mp4"></audio>
+<audio id="key7_audio" class="audio"><source src="key7.m4a" type="audio/mp4"></audio>
+<audio id="key8_audio" class="audio"><source src="key8.m4a" type="audio/mp4"></audio>
+<audio id="key9_audio" class="audio"><source src="key9.m4a" type="audio/mp4"></audio>
+<audio id="key10_audio" class="audio"><source src="key10.m4a" type="audio/mp4"></audio>
+<audio id="key11_audio" class="audio"><source src="key11.m4a" type="audio/mp4"></audio>
+<audio id="key12_audio" class="audio"><source src="key12.m4a" type="audio/mp4"></audio>
+<audio id="key13_audio" class="audio"><source src="key13.m4a" type="audio/mp4"></audio>
+<audio id="key14_audio" class="audio"><source src="key14.m4a" type="audio/mp4"></audio>
+<audio id="key15_audio" class="audio"><source src="key15.m4a" type="audio/mp4"></audio>
+<audio id="key16_audio" class="audio"><source src="key16.m4a" type="audio/mp4"></audio>
+<audio id="key17_audio" class="audio"><source src="key17.m4a" type="audio/mp4"></audio>
+<audio id="key18_audio" class="audio"><source src="key18.m4a" type="audio/mp4"></audio>
+<audio id="key19_audio" class="audio"><source src="key19.m4a" type="audio/mp4"></audio>
+<audio id="key20_audio" class="audio"><source src="key20.m4a" type="audio/mp4"></audio>
+<audio id="key21_audio" class="audio"><source src="key21.m4a" type="audio/mp4"></audio>
+<audio id="key22_audio" class="audio"><source src="key22.m4a" type="audio/mp4"></audio>
+<audio id="key23_audio" class="audio"><source src="key23.m4a" type="audio/mp4"></audio>
+<audio id="key24_audio" class="audio"><source src="key24.m4a" type="audio/mp4"></audio>
+<audio id="key25_audio" class="audio"><source src="key25.m4a" type="audio/mp4"></audio>
+<audio id="key26_audio" class="audio"><source src="key26.m4a" type="audio/mp4"></audio>
+<audio id="key27_audio" class="audio"><source src="key27.m4a" type="audio/mp4"></audio>
+<audio id="key28_audio" class="audio"><source src="key28.m4a" type="audio/mp4"></audio>
+<audio id="key29_audio" class="audio"><source src="key29.m4a" type="audio/mp4"></audio>
+<audio id="key30_audio" class="audio"><source src="key30.m4a" type="audio/mp4"></audio>
+<audio id="key31_audio" class="audio"><source src="key31.m4a" type="audio/mp4"></audio>
+<audio id="key32_audio" class="audio"><source src="key32.m4a" type="audio/mp4"></audio>
+<audio id="key33_audio" class="audio"><source src="key33.m4a" type="audio/mp4"></audio>
+<audio id="key34_audio" class="audio"><source src="key34.m4a" type="audio/mp4"></audio>
+<audio id="key35_audio" class="audio"><source src="key35.m4a" type="audio/mp4"></audio>
+<audio id="key36_audio" class="audio"><source src="key36.m4a" type="audio/mp4"></audio>
+<audio id="key37_audio" class="audio"><source src="key37.m4a" type="audio/mp4"></audio>
+<audio id="key38_audio" class="audio"><source src="key38.m4a" type="audio/mp4"></audio>
+<audio id="key39_audio" class="audio"><source src="key39.m4a" type="audio/mp4"></audio>
+<audio id="key40_audio" class="audio"><source src="key40.m4a" type="audio/mp4"></audio>
+<audio id="key41_audio" class="audio"><source src="key41.m4a" type="audio/mp4"></audio>
+<audio id="key42_audio" class="audio"><source src="key42.m4a" type="audio/mp4"></audio>
+<audio id="key43_audio" class="audio"><source src="key43.m4a" type="audio/mp4"></audio>
+<audio id="key44_audio" class="audio"><source src="key44.m4a" type="audio/mp4"></audio>
+<audio id="key45_audio" class="audio"><source src="key45.m4a" type="audio/mp4"></audio>
+<audio id="key46_audio" class="audio"><source src="key46.m4a" type="audio/mp4"></audio>
+<audio id="key47_audio" class="audio"><source src="key47.m4a" type="audio/mp4"></audio>
+<audio id="key48_audio" class="audio"><source src="key48.m4a" type="audio/mp4"></audio>
+<audio id="key49_audio" class="audio"><source src="key49.m4a" type="audio/mp4"></audio>
+<audio id="key50_audio" class="audio"><source src="key50.m4a" type="audio/mp4"></audio>
+<audio id="key51_audio" class="audio"><source src="key51.m4a" type="audio/mp4"></audio>
+<audio id="key52_audio" class="audio"><source src="key52.m4a" type="audio/mp4"></audio>
+
+<script>
+    const keys = document.querySelectorAll('.key');
+    const allAudios = document.querySelectorAll('audio');
+
+    keys.forEach(key => {
+        key.addEventListener('click', () => {
+            
+            allAudios.forEach(audio => {
+                audio.pause();
+                audio.currentTime = 0
+            });
+
+            const targetAudioId = `${key.id}_audio`;
+            const currentAudio = document.getElementById(targetAudioId);
+            
+            if (currentAudio) {
+                currentAudio.play();
+            }
+        });
+    });
+</script>
+</body>
+</html>
