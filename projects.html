@@ -3,276 +3,163 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Projects</title>
 	
 	<style>
-
-		body{
+		body {
 			background-color: white;
 			font-family: fantasy;
 			font-size: 15px;
 			color: lightpink;
+			text-align: center;
 		}
 
-		.option{
-			width:25%;
-			height:100px;
-			background-color:lightskyblue;
-			display:inline-block;
-			text-align:center;
+		#menu {
+			width: 100%;
+			background-color: lightpink;
+			height: 100px;
+			margin-bottom: 50px;
+		}
+
+		.option {
+			width: 25%;
+			height: 100px;
+			background-color: lightskyblue;
+			display: inline-block;
+			text-align: center;
 			background-position: center;
-			background-size:contain;
+			background-size: contain;
 			background-repeat: no-repeat;
+			vertical-align: top;
 		}
 
-		.text{
-			position:relative;
+		.text {
+			position: relative;
 			color: lightpink;
 			font-size: 25px;
-			top:100%;
+			top: 35%; 
 		}
 
-		.option2{
-			position: relative;
-			top: 50%;
-			width:25%;
-			height:100px;
-			background-color:lightpink;
-			text-align:center;
+		.project-container {
+			display: block;
+			margin: 25px auto;
+			text-decoration: none;
+			width: max-content;
+		}
+
+		.bubble {
+			width: 400px;
+			height: 120px;
+			background-color: lightpink;
+			text-align: center;
 			background-position: center;
-			background-size:contain;
+			background-size: contain;
 			background-repeat: no-repeat;
 			border-radius: 50%;
+			display: inline-block; 
 		}
 
-		.option3{
+		.text2 {
 			position: relative;
-			top: 80%;
-			width:100%;
-			height:100px;
-			background-color:lightpink;
-			text-align:center;
-			background-position: center;
-			background-size:contain;
-			background-repeat: no-repeat;
-			border-radius: 50%;
-		}
-
-		.option4{
-			position: relative;
-			top: 80%;
-			width:100%;
-			height:100px;
-			background-color:lightpink;
-			text-align:center;
-			background-position: center;
-			background-size:contain;
-			background-repeat: no-repeat;
-			border-radius: 50%;
-		}
-
-		.option5{
-			position: relative;
-			top: 80%;
-			width:100%;
-			height:100px;
-			background-color:lightpink;
-			text-align:center;
-			background-position: center;
-			background-size:contain;
-			background-repeat: no-repeat;
-			border-radius: 50%;
-		}
-
-		.option6{
-			position: relative;
-			top: 80%;
-			width:100%;
-			height:100px;
-			background-color:lightpink;
-			text-align:center;
-			background-position: center;
-			background-size:contain;
-			background-repeat: no-repeat;
-			border-radius: 50%;
-		}
-
-		.option7{
-			position: relative;
-			top: 80%;
-			width:100%;
-			height:100px;
-			background-color:lightpink;
-			text-align:center;
-			background-position: center;
-			background-size:contain;
-			background-repeat: no-repeat;
-			border-radius: 50%;
-		}
-
-		.option8{
-			position: relative;
-			top: 80%;
-			width:100%;
-			height:100px;
-			background-color:lightpink;
-			text-align:center;
-			background-position: center;
-			background-size:contain;
-			background-repeat: no-repeat;
-			border-radius: 50%;
-		}
-
-		.option9{
-			position: relative;
-			top: 80%;
-			width:100%;
-			height:100px;
-			background-color:lightpink;
-			text-align:center;
-			background-position: center;
-			background-size:contain;
-			background-repeat: no-repeat;
-			border-radius: 50%;
-		}
-
-		.option10{
-			position: relative;
-			top: 80%;
-			width:100%;
-			height:100px;
-			background-color:lightpink;
-			text-align:center;
-			background-position: center;
-			background-size:contain;
-			background-repeat: no-repeat;
-			border-radius: 50%;
-		}
-
-		.option11{
-			position: relative;
-			top: 80%;
-			width:100%;
-			height:100px;
-			background-color:lightpink;
-			text-align:center;
-			background-position: center;
-			background-size:contain;
-			background-repeat: no-repeat;
-			border-radius: 50%;
-		}
-
-		.option12{
-			position: relative;
-			top: 80%;
-			width:100%;
-			height:100px;
-			background-color:lightpink;
-			text-align:center;
-			background-position: center;
-			background-size:contain;
-			background-repeat: no-repeat;
-			border-radius: 50%;
-		}
-
-		.text2{
-			position:relative;
 			color: lightskyblue;
 			font-size: 25px;
-			top:35%;
+			top: 40%;
 		}
 
-		a{
-		text-decoration: none;
-
+		#indexlink, #journallink {
+			background-image: url(pooh3.png);
 		}
-
-		#menu{
-			width:100%;
-			background-color:lightpink;
-			height:100px;
-			
-		}
-
-		#indexlink{
-			background-image:url(pooh3.png);
-		}
-
-		#journallink{
-			background-image:url(pooh3.png);
-		}
-
-
 	</style>
-	
 </head>
 <body>
 
-	<center> <h1>Projects page</h1>
+	<h1>Projects page</h1>
 
 	<div id="menu">
-	<a href="index.html">
+		<a href="index.html">
+			<div id="indexlink" class="option">
+				<div class="text">Home Page</div>
+			</div>
+		</a>
 
-	<div id="indexlink" class="option">
-		<div class="text">Home Page</div>
+		<a href="journal.html">
+			<div id="journallink" class="option">
+				<div class="text">Journal Page</div>
+			</div>
+		</a>
 	</div>
-</a>
 
-	<a href="journal.html">
-		<div id="journallink" class="option">
-		<div class="text">Journal Page</div>
-	</div>
-
-	<a href="project1.html">
-		<div id="projectlink" class="option2">
-		<div class="text2">🌼Project 1🌼</div>
-
-	<a href="audio.html">
-		<div id="projectlink2" class="option3">
-		<div class="text2">🌼Project 2🌼</div>
-
-	<a href="thanksgiving.html">
-		<div id="projectlink3" class="option4">
-		<div class="text2">🌼Project 3🌼</div>
-
-	<a href="eventListener.html">
-		<div id="projectlink4" class="option5">
-		<div class="text2">🌼Project 4🌼</div>
-
-	<a href="confetti.html">
-		<div id="projectlink5" class="option6">
-		<div class="text2">🌼Project 5🌼</div>
-
-	<a href="train.html">
-		<div id="projectlink6" class="option7">
-		<div class="text2">🌼Project 6🌼</div>
-
-	<a href="p5intro.html">
-		<div id="projectlink7" class="option8">
-		<div class="text2">🌼Project 7🌼</div>
-
-	<a href="drawing.html">
-		<div id="projectlink8" class="option9">
-		<div class="text2">🌼Project 8🌼</div>
-
-	<a href="p5transformation.html">
-		<div id="projectlink9" class="option10">
-		<div class="text2">🌼Project 9🌼</div>
-
-	<a href="walker.html">
-		<div id="projectlink10" class="option11">
-		<div class="text2">🌼Project 10🌼</div>
-
-	<a href="bouncingball.html">
-		<div id="projectlink11" class="option12">
-		<div class="text2">🌼Project 11🌼</div>
-
+	<a href="project1.html" class="project-container">
+		<div id="projectlink" class="bubble">
+			<div class="text2">🌼Project 1🌼</div>
+		</div>
 	</a>
-	
-	</center>
 
+	<a href="audio.html" class="project-container">
+		<div id="projectlink2" class="bubble">
+			<div class="text2">🌼Project 2🌼</div>
+		</div>
+	</a>
 
+	<a href="thanksgiving.html" class="project-container">
+		<div id="projectlink3" class="bubble">
+			<div class="text2">🌼Project 3🌼</div>
+		</div>
+	</a>
+
+	<a href="eventListener.html" class="project-container">
+		<div id="projectlink4" class="bubble">
+			<div class="text2">🌼Project 4🌼</div>
+		</div>
+	</a>
+
+	<a href="confetti.html" class="project-container">
+		<div id="projectlink5" class="bubble">
+			<div class="text2">🌼Project 5🌼</div>
+		</div>
+	</a>
+
+	<a href="train.html" class="project-container">
+		<div id="projectlink6" class="bubble">
+			<div class="text2">🌼Project 6🌼</div>
+		</div>
+	</a>
+
+	<a href="p5intro.html" class="project-container">
+		<div id="projectlink7" class="bubble">
+			<div class="text2">🌼Project 7🌼</div>
+		</div>
+	</a>
+
+	<a href="drawing.html" class="project-container">
+		<div id="projectlink8" class="bubble">
+			<div class="text2">🌼Project 8🌼</div>
+		</div>
+	</a>
+
+	<a href="p5transformation.html" class="project-container">
+		<div id="projectlink9" class="bubble">
+			<div class="text2">🌼Project 9🌼</div>
+		</div>
+	</a>
+
+	<a href="walker.html" class="project-container">
+		<div id="projectlink10" class="bubble">
+			<div class="text2">🌼Project 10🌼</div>
+		</div>
+	</a>
+
+	<a href="bouncingball.html" class="project-container">
+		<div id="projectlink11" class="bubble">
+			<div class="text2">🌼Project 11🌼</div>
+		</div>
+	</a>
+
+	<a href="piano.html" class="project-container">
+		<div id="projectlink12" class="bubble">
+			<div class="text2">🌼Project 12🌼</div>
+		</div>
+	</a>
 
 </body>
-
 </html>
